@@ -7,7 +7,7 @@ const Nav = () => {
     <nav className=(style.nav)>
       <Title/>
       <Seeker/>
-    </nav
+    </nav>
   )
 }
 
