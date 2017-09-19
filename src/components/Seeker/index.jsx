@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom'
 
 import style from './style.scss'
 
-
 class Seeker extends Component {
 
 	constructor(props){
@@ -29,6 +28,7 @@ class Seeker extends Component {
 			</form>
 			)
 	}
+
 
 }
 
