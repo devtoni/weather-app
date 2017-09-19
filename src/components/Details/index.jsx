@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { Component } from 'react'
+import ListDays from '../ListDays'
 
-const Details = () => {
+class Details extends Component {
+  constructor () {
+    super()
+    this.state = {
+      name: '...'
+      days:'...'
+    }
+  }
   return (
-    <h1>Details</h1>
+    <div>
+      <h2>state.name</h2>
+      <ListDays days={this.state.days}/>
+    </div>
   )
 }
 
