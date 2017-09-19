@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from './main.scss'
 
+import styles from './main.scss'
+
 const Main = () => {
   return (
     <div>
