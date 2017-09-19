@@ -1,8 +1,13 @@
 import React from 'react'
 
+import style from './nav.scss'
+
 const Nav = () => {
   return (
-    <h1>Nav</h1>
+    <nav className=(style.nav)>
+      <Title/>
+      <Seeker/>
+    </nav>
   )
 }
 
