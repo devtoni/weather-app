@@ -4,9 +4,9 @@ import styles from './main.scss'
 
 const Main = () => {
   return (
-    <div>
+    <main className={styles.main}>
       <h1>Enter a City and State</h1>
-    </div>
+    </main>
   )
 }
 
