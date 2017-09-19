@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Day = () => {
+const Day = ({icon, day}) => {
   return (
-    <h1>Day</h1>
+    <div>
+      <img src={icon} alt='' />
+      <h2>{day}</h2>
+    </div>
   )
 }
 

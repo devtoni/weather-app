@@ -5,9 +5,13 @@ import Day from '../Day'
 const ListDay = ({ days }) => {
   return (
     <ul>
-      {days.map(u => {
+      {days.map(day => {
         return (
-          <Day key={uuid.v4()} icon={u.icon} name={u.day} />
+          <Day
+            key={uuid.v4()}
+            icon={day.icon}
+            day={day.day}
+          />
         )
       })}
     </ul>
