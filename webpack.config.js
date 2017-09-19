@@ -2,7 +2,9 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const cssModules = 'modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]'
-module.exports = {
+const webpack = require('webpack')
+
+const config = {
   resolve: {
     extensions: ['.js', '.jsx', '.css']
   },
@@ -35,3 +37,15 @@ module.exports = {
     new ExtractTextPlugin('style.css', { allChunks: true })
   ]
 }
+if (process.env.NODE_ENV === 'production') {
+  config.plugins.push(
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      }
+    }),
+    new webpack.optimize.UglifyJsplugin()
+    )
+}
+
+module.exports = config
