@@ -21,8 +21,8 @@ class Forecast extends Component {
     console.log()
     return (
       <div>
-        <h2>{this.state.days[0].city}</h2>
-        <ListDays days={this.state.days} />
+          <h2>{this.state.days[0].city}</h2>
+          <ListDays days={this.state.days} />
       </div>
     )
   }
