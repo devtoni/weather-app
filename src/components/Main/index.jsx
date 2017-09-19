@@ -1,6 +1,6 @@
 import React from 'react'
-
 import styles from './main.scss'
+import Seeker from '../Seeker'
 
 const Main = () => {
   return (
