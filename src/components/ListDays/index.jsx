@@ -8,7 +8,10 @@ const ListDay = ({ days }) => {
     <ul>
       {days.map(day => {
         return (
-        <Link to={`/details/${day.day}`}>
+        <Link to={{
+              pathname:`/details/${day.day}`,
+              state: {day}
+               }}>
           <Day
             key={uuid.v4()}
             icon={day.icon}
