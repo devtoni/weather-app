@@ -1,6 +1,29 @@
-.button {
-	background-color: #C41E3D;
-	color: white;
-	border: 1px solid #FF2C55;
-	border-radius: 5px;
+form{
+	margin: 15px;
+	button {
+		margin-left:5px;
+		background-color: #C41E3D;
+		border: 1px solid #FF2C55;
+		border-radius: 5px;
+		a{
+			color: white;
+			text-decoration: none;
+			&:link{
+				text-decoration: none;
+			}
+		}
+		&:hover{
+			background-color: #3C0919;
+		}
+	}
+	input{
+		border-radius: 5px;
+		&:placeholder {
+			color: red !important;
+		}
+	}
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #FF2C55;
 }
