@@ -1,8 +1,12 @@
 import React from 'react'
 
+import styles from './main.scss'
+
 const Main = () => {
   return (
-    <h1>Main</h1>
+    <div>
+      <h1>Enter a City and State</h1>
+    </div>
   )
 }
 

@@ -4,9 +4,9 @@ import style from './nav.scss'
 
 const Nav = () => {
   return (
-    <nav className=(style.nav)>
-      <Title/>
-      <Seeker/>
+    <nav className={style.nav}>
+      <Title />
+      <Seeker />
     </nav>
   )
 }
