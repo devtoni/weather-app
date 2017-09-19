@@ -6,7 +6,10 @@ import style from './style.scss'
 const Seeker = () => {
 
 	return(
-		<h1>Hola</h1>
+		<form>
+		<input type="text"></input>
+		<button type="submit" className={style.button}>Search</button>
+		</form>
 		)
 
 }
