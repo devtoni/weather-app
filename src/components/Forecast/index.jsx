@@ -7,7 +7,7 @@ class Forecast extends Component {
     super()
     this.state = {
       name: '...',
-      days: '...'
+      days: ['']
     }
   }
   componentDidMount () {

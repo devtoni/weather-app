@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React from 'react'
+import uuid from 'uuid'
 import Day from '../Day'
 
 const ListDay = ({ days }) => {
@@ -6,7 +7,7 @@ const ListDay = ({ days }) => {
     <ul>
       {days.map(u => {
         return (
-          <Day icon={u.icon} name={u.day} />
+          <Day key={uuid.v4()} icon={u.icon} name={u.day} />
         )
       })}
     </ul>
