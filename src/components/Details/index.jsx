@@ -5,16 +5,18 @@ class Details extends Component {
   constructor () {
     super()
     this.state = {
-      name: '...'
-      days:'...'
+      name: '...',
+      days: '...'
     }
   }
-  return (
-    <div>
-      <h2>state.name</h2>
-      <ListDays days={this.state.days}/>
-    </div>
-  )
+  render () {
+    return (
+      <div>
+        <h2>state.name</h2>
+        <ListDays days={this.state.days} />
+      </div>
+    )
+  }
 }
 
 export default Details

@@ -1,18 +1,16 @@
 import React, { Component } from 'react'
-import User from './Day'
+import Day from '../Day'
 
-const ListDay = ({ days }) =>{
-  render () {
-    return (
-      <ul>
-        {days.map(u => {
-          return (
-            <Day icon={u.icon} name={u.day}/>
-          )
-        })}
-      </ul>
-    )
-  }
+const ListDay = ({ days }) => {
+  return (
+    <ul>
+      {days.map(u => {
+        return (
+          <Day icon={u.icon} name={u.day} />
+        )
+      })}
+    </ul>
+  )
 }
 
-export default UserList
+export default ListDay
