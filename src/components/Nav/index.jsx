@@ -1,14 +1,27 @@
-import React from 'react'
+import React, {Component} from 'react'
 
-import style from './nav.scss'
+import Title from '../Title'
+import Seeker from '../Seeker'
 
-const Nav = () => {
-  return (
-    <nav className=(style.nav)>
-      <Title/>
-      <Seeker/>
-    </nav>
-  )
+import style from './style.scss'
+
+
+class Nav extends Component {
+
+	constructor (){
+		super();
+		this.state = {name: "Weather app"}
+	}
+
+
+	render(){
+		return (
+			<nav className={style.nav}>
+				<Title name={this.state.name}/>
+				<Seeker/>
+			</nav>
+			)
+	}
 }
 
 export default Nav
