@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import weatherApi from '../../service/weatherApi'
 import queryString from 'query-string'
 import ListDays from '../ListDays'
+import style from './main.scss'
 
 class Forecast extends Component {
   constructor () {
@@ -20,7 +21,7 @@ class Forecast extends Component {
   render () {
     console.log()
     return (
-      <div>
+      <div className={style.center}>
           <h2>{this.state.days[0].city}</h2>
           <ListDays days={this.state.days} />
       </div>

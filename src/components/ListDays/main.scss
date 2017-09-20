@@ -1,0 +1,13 @@
+.days{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.links{
+	text-decoration:none;
+	color: black;
+	&visited{
+		color: black;
+	}
+}
