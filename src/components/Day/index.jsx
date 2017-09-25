@@ -1,12 +1,25 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
-const Day = ({icon, day}) => {
+const Day = ({day, icon, info}) => {
   return (
-    <div>
-      <img src={icon} alt='' />
-      <h2>{day}</h2>
-    </div>
+    <Link to={{
+      pathname: `/details/${day}`,
+      state: {info}
+    }}>
+      <div>
+        <img src={icon} alt='' />
+        <h2>{day}</h2>
+      </div>
+    </Link>
   )
+}
+
+Day.propTypes = {
+  day: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  info: PropTypes.object.isRequired
 }
 
 export default Day

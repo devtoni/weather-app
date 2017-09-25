@@ -9,7 +9,6 @@ export default {
     return axios.get(URL)
     .then(results => {
       const forecastDays = results.data.list
-      console.log(forecastDays)
       const weatherData = forecastDays.map(day => {
         return {
           city: city,

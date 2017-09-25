@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import weatherApi from '../../service/weatherApi'
 import queryString from 'query-string'
 import ListDays from '../ListDays'
 import style from './main.scss'
 
 class Forecast extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
       days: ['']
     }
@@ -14,19 +15,27 @@ class Forecast extends Component {
   componentDidMount () {
     const { city } = queryString.parse(this.props.location.search)
     weatherApi.getForecast(city)
-    .then(days => {
-      this.setState({ days })
+    .then(listDays => {
+      this.setState({ days: listDays })
     })
   }
   render () {
-    console.log()
     return (
       <div className={style.center}>
-          <h2>{this.state.days[0].city}</h2>
-          <ListDays days={this.state.days} />
+        <h2>{this.state.days[0].city}</h2>
+        <ListDays days={this.state.days} />
       </div>
     )
   }
 }
 
+Forecast.propTypes = {
+  location: PropTypes.shape({
+    search: PropTypes.string.isRequired
+  })
+}
+
+Forecast.defaultProps = {
+  search: 'Barcelona'
+}
 export default Forecast

@@ -1,9 +1,8 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 import style from './style.scss'
 
 class Seeker extends Component {
-
 	constructor(props){
 		super(props)
 		this.state = { city: ''}

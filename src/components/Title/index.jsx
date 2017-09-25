@@ -1,11 +1,23 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
-import style from './style.scss'
+import styles from './style.scss'
 
 const Title = ({name}) => {
   return (
-    <Link className={style.Link} to='/'><h1>{name}</h1></Link>
+    <Link
+      className={styles.Link}
+      to='/'>
+      <h1 className={styles.title}>{name}</h1>
+    </Link>
   )
 }
 
+Title.propTypes = {
+  name: PropTypes.string
+}
+
+Title.defaultProps = {
+  name: 'Clever Title'
+}
 export default Title
