@@ -8,7 +8,7 @@ const config = {
   resolve: {
     extensions: ['.js', '.jsx', '.css']
   },
-  entry: './src/index.jsx',
+  entry: ['babel-polyfill', './src/index.jsx'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',

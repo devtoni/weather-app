@@ -12,12 +12,18 @@ class Forecast extends Component {
       days: ['']
     }
   }
-  componentDidMount () {
+  updateWeather = async () => {
     const { city } = queryString.parse(this.props.location.search)
-    weatherApi.getForecast(city)
-    .then(listDays => {
+    try {
+      const listDays = await weatherApi.getForecast(city)
       this.setState({ days: listDays })
-    })
+    } catch (error) {
+      console.log('It was an error', error)
+    }
+    
+  }
+  componentDidMount () {
+    this.updateWeather()
   }
   render () {
     return (

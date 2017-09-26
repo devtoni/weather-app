@@ -22,4 +22,10 @@ Day.propTypes = {
   info: PropTypes.object.isRequired
 }
 
+Day.defaultProps = {
+  day: '',
+  icon: '',
+  info: {}
+}
+
 export default Day
